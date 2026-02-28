@@ -58,10 +58,10 @@ export default function About() {
 
             {/* Mission */}
             <section className="py-24 bg-white">
-                <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="reveal-up">
                         <p className="text-gold uppercase tracking-[0.4em] text-xs font-bold mb-4">Who We Are</p>
-                        <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-8 leading-tight">Skyline Infra Pvt. Ltd.</h2>
+                        <h2 className="font-serif text-4xl sm:text-5xl text-charcoal mb-8 leading-tight">Skyline Infra Pvt. Ltd.</h2>
                         <div className="space-y-5 text-charcoal/70 leading-relaxed text-lg">
                             <p>Skyline Infra Developers is India's premium real estate developer, renowned for creating architectural landmarks that redefine skylines across the country's most dynamic cities.</p>
                             <p>Founded in 1998, we operate at the intersection of vision and craft — where timeless design meets future-ready technology. Our portfolio spans luxury residences, Grade-A commercial buildings, and integrated lifestyle communities.</p>
@@ -84,7 +84,7 @@ export default function About() {
 
             {/* Stats */}
             <section className="py-16 bg-charcoal">
-                <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y sm:divide-y-0 divide-white/10 sm:gap-y-12">
                     {[
                         { num: '150+', label: 'Projects Delivered' },
                         { num: '25M+', label: 'Sq. Ft. Developed' },
@@ -101,23 +101,23 @@ export default function About() {
 
             {/* Timeline */}
             <section className="py-24 bg-offwhite">
-                <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <div className="max-w-7xl mx-auto px-6 sm:px-12">
                     <div className="text-center mb-16 reveal-up">
                         <p className="text-gold uppercase tracking-[0.4em] text-xs font-bold mb-4">Our Journey</p>
-                        <h2 className="font-serif text-4xl md:text-5xl text-charcoal">Milestones That Define Us</h2>
+                        <h2 className="font-serif text-4xl sm:text-5xl text-charcoal">Milestones That Define Us</h2>
                     </div>
                     <div className="relative">
-                        <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gold/20 hidden md:block" />
+                        <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gold/20 hidden lg:block" />
                         <div className="space-y-12">
                             {timeline.map((item, i) => (
-                                <div key={item.year} className={`flex flex-col md:flex-row items-center gap-8 reveal-up ${i % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
-                                    <div className={`w-full md:w-5/12 ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                                <div key={item.year} className={`flex flex-col lg:flex-row items-center gap-8 reveal-up ${i % 2 === 0 ? '' : 'lg:flex-row-reverse'}`}>
+                                    <div className={`w-full lg:w-5/12 text-center ${i % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
                                         <span className="font-serif text-5xl text-gold">{item.year}</span>
                                     </div>
-                                    <div className="hidden md:flex w-2/12 justify-center">
+                                    <div className="hidden lg:flex w-2/12 justify-center">
                                         <div className="w-4 h-4 rounded-full bg-gold border-4 border-white ring-2 ring-gold/30" />
                                     </div>
-                                    <div className="w-full md:w-5/12 bg-white p-6 border-l-2 border-gold">
+                                    <div className="w-full lg:w-5/12 bg-white p-6 border-l-2 border-gold shadow-sm">
                                         <h4 className="font-serif text-xl mb-2">{item.title}</h4>
                                         <p className="text-charcoal/60 text-sm">{item.desc}</p>
                                     </div>
@@ -130,12 +130,12 @@ export default function About() {
 
             {/* Leadership */}
             <section className="py-24 bg-white">
-                <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <div className="max-w-7xl mx-auto px-6 sm:px-12">
                     <div className="text-center mb-16 reveal-up">
                         <p className="text-gold uppercase tracking-[0.4em] text-xs font-bold mb-4">The Team</p>
-                        <h2 className="font-serif text-4xl md:text-5xl text-charcoal">Leadership That Leads</h2>
+                        <h2 className="font-serif text-4xl sm:text-5xl text-charcoal">Leadership That Leads</h2>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-8">
                         {leadership.map(person => (
                             <div key={person.name} className="group reveal-up">
                                 <div className="overflow-hidden h-80 mb-6">
@@ -152,9 +152,9 @@ export default function About() {
 
             {/* Awards */}
             <section className="py-16 bg-charcoal">
-                <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <div className="max-w-7xl mx-auto px-6 sm:px-12">
                     <p className="text-gold uppercase tracking-[0.4em] text-xs font-bold text-center mb-10">Recognition</p>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {['CREDAI Developer of Year', 'CNBC Awaaz Real Estate Award', 'Times Realty Icons', 'ET Now Real Estate Excellence'].map(award => (
                             <div key={award} className="border border-white/10 p-6 text-center reveal-up">
                                 <div className="w-10 h-10 border border-gold/50 mx-auto mb-4 flex items-center justify-center">

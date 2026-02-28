@@ -56,14 +56,14 @@ export default function Projects() {
     }, { scope: container });
 
     return (
-        <section id="projects" ref={container} className="py-24 px-6 md:px-12 bg-offwhite">
+        <section id="projects" ref={container} className="py-24 px-6 sm:px-12 bg-offwhite">
             <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-16 gap-8">
                     <div className="max-w-2xl">
                         <h2 className="font-serif text-gold text-sm uppercase tracking-[0.3em] mb-4 reveal-text">Our Collection</h2>
-                        <h3 className="font-serif text-4xl md:text-6xl text-charcoal leading-tight reveal-text">Iconic Residences &amp; Commercial Landmarks</h3>
+                        <h3 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-charcoal leading-tight reveal-text">Iconic Residences &amp; Commercial Landmarks</h3>
                     </div>
-                    <div className="hidden md:block">
+                    <div className="hidden sm:block">
                         <Link
                             to="/ongoing-projects"
                             className="border-b-2 border-gold pb-2 text-xs uppercase tracking-widest font-bold hover:text-gold transition-colors"
@@ -73,12 +73,12 @@ export default function Projects() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {featuredProjects.map((project, index) => (
                         <Link
                             key={project.slug}
                             to={`/projects/${project.slug}`}
-                            className={`group relative h-[500px] overflow-hidden cursor-pointer reveal-item opacity-0 block ${index === 1 ? 'mt-0 md:mt-12' : ''}`}
+                            className={`group relative h-[450px] sm:h-[500px] overflow-hidden cursor-pointer reveal-item opacity-0 block ${index === 1 ? 'mt-0 lg:mt-12' : ''}`}
                         >
                             <img
                                 src={project.image}
@@ -102,7 +102,7 @@ export default function Projects() {
                 </div>
 
                 {/* Mobile CTA */}
-                <div className="mt-10 text-center md:hidden">
+                <div className="mt-10 text-center sm:hidden">
                     <Link
                         to="/ongoing-projects"
                         className="inline-block border-b-2 border-gold pb-2 text-xs uppercase tracking-widest font-bold hover:text-gold transition-colors"

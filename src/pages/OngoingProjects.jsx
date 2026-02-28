@@ -196,7 +196,7 @@ export default function OngoingProjects() {
                                 {project.amenities && (
                                     <div className="mb-8">
                                         <h4 className="text-[10px] uppercase tracking-widest font-bold text-charcoal/50 border-b border-charcoal/10 pb-2 mb-4">Key Amenities</h4>
-                                        <div className="grid grid-cols-3 sm:grid-cols-3 gap-6">
+                                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                                             {project.amenities.map((amenity, i) => (
                                                 <div key={i} className="flex flex-col items-center sm:items-start group">
                                                     <div className="w-12 h-12 rounded-full border border-charcoal/10 flex items-center justify-center bg-offwhite mb-3 group-hover:border-gold group-hover:bg-gold/5 transition-colors">
@@ -224,14 +224,14 @@ export default function OngoingProjects() {
                                 </div>
 
                                 {/* Call to Actions */}
-                                <div className="flex flex-col sm:flex-row gap-4 mt-auto">
-                                    <Link to={`/projects/${project.slug}`} className="text-center bg-charcoal text-white px-6 py-4 text-xs uppercase tracking-widest font-bold hover:bg-gold transition-colors block w-full">
+                                <div className="flex flex-col sm:flex-row xl:flex-nowrap flex-wrap gap-4 mt-auto">
+                                    <Link to={`/projects/${project.slug}`} className="text-center bg-charcoal text-white px-6 py-4 text-xs uppercase tracking-widest font-bold hover:bg-gold transition-colors block flex-1">
                                         View Details
                                     </Link>
-                                    <Link to="/brochure" className="text-center border border-charcoal text-charcoal px-6 py-4 text-xs uppercase tracking-widest font-bold hover:bg-charcoal/5 transition-colors block w-full">
+                                    <Link to="/brochure" className="text-center border border-charcoal text-charcoal px-6 py-4 text-xs uppercase tracking-widest font-bold hover:bg-charcoal/5 transition-colors block flex-1">
                                         Download Brochure
                                     </Link>
-                                    <Link to="/contact" className="text-center bg-gold text-white px-6 py-4 text-xs uppercase tracking-widest font-bold hover:shadow-lg transition-all block w-full">
+                                    <Link to="/contact" className="text-center bg-gold text-white px-6 py-4 text-xs uppercase tracking-widest font-bold hover:shadow-lg transition-all block flex-1 sm:w-auto xl:w-auto xl:whitespace-nowrap">
                                         Enquire Now
                                     </Link>
                                 </div>

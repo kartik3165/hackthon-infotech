@@ -35,11 +35,11 @@ const navGroups = [
 
 export default function Footer() {
     return (
-        <footer className="bg-charcoal text-white pt-20 pb-10 px-6 md:px-12 border-t border-white/5">
+        <footer className="bg-charcoal text-white pt-20 pb-10 px-6 sm:px-12 border-t border-white/5">
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
                     {/* Brand */}
-                    <div className="md:col-span-2">
+                    <div className="sm:col-span-2 lg:col-span-2">
                         <Link to="/" className="flex items-center space-x-2 mb-6">
                             <div className="w-10 h-10 border-2 border-gold flex items-center justify-center">
                                 <span className="font-serif text-xl font-bold tracking-tighter">S</span>
@@ -84,8 +84,8 @@ export default function Footer() {
                     <p className="text-[10px] text-white/20 leading-relaxed max-w-4xl">
                         MahaRERA Registration Nos: Skyline Heights — P51800045123 | Skyline Business Hub — P51800045124 | Skyline Greens — P51800045125 | Skyline Metro Plaza — P51800045126. Available at <span className="underline">maharera.mahaonline.gov.in</span>. All images, renders, and CGIs shown are indicative and subject to change without notice.
                     </p>
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p className="text-[10px] text-white/30 uppercase tracking-[0.2em]">© {new Date().getFullYear()} Skyline Infra Developers Pvt. Ltd. All Rights Reserved.</p>
+                    <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
+                        <p className="text-[10px] text-white/30 uppercase tracking-[0.2em] text-center lg:text-left text-balance">© {new Date().getFullYear()} Skyline Infra Developers Pvt. Ltd. All Rights Reserved.</p>
                         <div className="flex gap-6 text-[10px] text-white/30 uppercase tracking-[0.2em]">
                             <Link to="/terms" className="hover:text-gold transition-colors">Terms</Link>
                             <Link to="/privacy" className="hover:text-gold transition-colors">Privacy</Link>

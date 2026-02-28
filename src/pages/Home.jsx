@@ -73,10 +73,10 @@ export default function Home() {
 
             {/* 2. Quick Highlights Strip */}
             <section className="bg-charcoal border-t border-white/5">
-                <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/5">
-                    {highlights.map(h => (
-                        <div key={h.label} className="highlight-item py-8 px-6 text-center group hover:bg-gold/10 transition-colors duration-300">
-                            <span className="block font-serif text-3xl md:text-4xl text-gold mb-1">{h.num}</span>
+                <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/5">
+                    {highlights.map((h, i) => (
+                        <div key={h.label} className={`highlight-item py-8 px-6 text-center group hover:bg-gold/10 transition-colors duration-300 ${i !== 0 ? 'border-t sm:border-t-0 sm:border-l border-white/5' : ''}`}>
+                            <span className="block font-serif text-3xl sm:text-4xl text-gold mb-1">{h.num}</span>
                             <span className="text-[10px] uppercase tracking-widest text-white/40">{h.label}</span>
                         </div>
                     ))}
@@ -88,11 +88,11 @@ export default function Home() {
 
             {/* 3b. CTA to see all ongoing projects */}
             <section className="py-6 bg-offwhite border-t border-charcoal/5">
-                <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p className="text-charcoal/60 text-sm">Explore our full portfolio of active developments.</p>
+                <div className="max-w-7xl mx-auto px-6 sm:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p className="text-charcoal/60 text-sm text-center sm:text-left">Explore our full portfolio of active developments.</p>
                     <Link
                         to="/ongoing-projects"
-                        className="bg-charcoal text-white px-8 py-3 text-xs uppercase tracking-widest font-bold hover:bg-gold transition-colors duration-300"
+                        className="bg-charcoal text-white px-8 py-3 text-xs uppercase tracking-widest font-bold hover:bg-gold transition-colors duration-300 whitespace-nowrap"
                     >
                         All Ongoing Projects
                     </Link>
@@ -101,21 +101,21 @@ export default function Home() {
 
             {/* 4. Featured Completed Projects Snippet */}
             <section className="py-24 bg-white">
-                <div className="max-w-7xl mx-auto px-6 md:px-12">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div className="max-w-7xl mx-auto px-6 sm:px-12">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-16 gap-6">
                         <div>
                             <p className="text-gold uppercase tracking-[0.4em] text-xs font-bold mb-3">Legacy of Delivery</p>
-                            <h2 className="font-serif text-4xl md:text-5xl text-charcoal leading-tight">Completed Projects</h2>
+                            <h2 className="font-serif text-4xl sm:text-5xl text-charcoal leading-tight">Completed Projects</h2>
                         </div>
                         <Link
                             to="/completed-projects"
-                            className="hidden md:block text-xs uppercase tracking-widest font-bold border-b-2 border-gold pb-1 hover:text-gold transition-colors"
+                            className="hidden sm:block text-xs uppercase tracking-widest font-bold border-b-2 border-gold pb-1 hover:text-gold transition-colors"
                         >
                             View All Completed
                         </Link>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {featuredCompleted.map(project => (
                             <div key={project.slug} className="group completed-card opacity-0">
                                 <div className="overflow-hidden h-64 mb-4">
@@ -144,7 +144,7 @@ export default function Home() {
                         ))}
                     </div>
 
-                    <div className="mt-10 text-center md:hidden">
+                    <div className="mt-10 text-center sm:hidden">
                         <Link
                             to="/completed-projects"
                             className="inline-block text-xs uppercase tracking-widest font-bold border-b-2 border-gold pb-1 hover:text-gold transition-colors"
@@ -157,7 +157,7 @@ export default function Home() {
 
             {/* 5. Dual CTA Banner */}
             <section className="home-cta-section opacity-0 py-16 bg-offwhite border-t border-charcoal/5">
-                <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* EMI CTA */}
                     <div className="bg-charcoal p-10 flex flex-col justify-between gap-6">
                         <div>

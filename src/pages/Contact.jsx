@@ -17,16 +17,16 @@ export default function Contact() {
             />
 
             <section className="py-24 bg-white">
-                <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-5 gap-16">
+                <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-24">
                     {/* Form */}
                     <div className="lg:col-span-3">
                         <p className="text-gold uppercase tracking-[0.4em] text-xs font-bold mb-4">Send Us a Message</p>
-                        <h2 className="font-serif text-4xl text-charcoal mb-8">Inquiry Form</h2>
+                        <h2 className="font-serif text-4xl sm:text-5xl text-charcoal mb-8">Inquiry Form</h2>
                         <InquiryForm />
                     </div>
 
                     {/* Contact Details */}
-                    <div className="lg:col-span-2 space-y-10">
+                    <div className="lg:col-span-2 space-y-10 border-t lg:border-t-0 lg:border-l border-charcoal/10 pt-10 lg:pt-0 lg:pl-10">
                         <div>
                             <p className="text-gold uppercase tracking-[0.4em] text-xs font-bold mb-6">Toll-Free Helpline</p>
                             <a href="tel:18001234567" className="font-serif text-4xl text-charcoal hover:text-gold transition-colors">
@@ -46,7 +46,7 @@ export default function Contact() {
 
                         <div>
                             <p className="text-gold uppercase tracking-[0.4em] text-xs font-bold mb-4">Follow Us</p>
-                            <div className="flex gap-4">
+                            <div className="flex flex-wrap gap-4">
                                 {['Instagram', 'LinkedIn', 'Facebook', 'YouTube'].map(s => (
                                     <a key={s} href="#" className="text-xs text-charcoal/50 hover:text-gold uppercase tracking-widest transition-colors border-b border-transparent hover:border-gold">
                                         {s}

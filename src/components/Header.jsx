@@ -8,6 +8,7 @@ export function cn(...inputs) {
 }
 
 const navLinks = [
+    { label: 'Home', href: '/' },
     { label: 'Heritage', href: '/about' },
     { label: 'Projects', href: '/ongoing-projects' },
     { label: 'Gallery', href: '/gallery' },
@@ -36,11 +37,11 @@ export default function Header() {
                 <div className="w-10 h-10 border-2 border-gold flex items-center justify-center">
                     <span className="font-serif text-xl font-bold tracking-tighter">S</span>
                 </div>
-                <span className="font-serif text-xl tracking-widest uppercase hidden sm:block">Skyline</span>
+                <span className="font-serif text-xl tracking-widest uppercase hidden lg:block">Skyline</span>
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden sm:flex space-x-8 uppercase text-xs tracking-[0.2em] font-bold">
+            <nav className="hidden lg:flex space-x-8 uppercase text-xs tracking-[0.2em] font-bold">
                 {navLinks.map(link => (
                     <NavLink
                         key={link.href}
@@ -58,13 +59,13 @@ export default function Header() {
             <div className="flex items-center gap-3">
                 <Link
                     to="/contact"
-                    className="hidden sm:block bg-gold hover:bg-white hover:text-charcoal text-white px-6 py-3 text-xs uppercase tracking-widest font-bold transition-all duration-300"
+                    className="hidden lg:block bg-gold hover:bg-white hover:text-charcoal text-white px-6 py-3 text-xs uppercase tracking-widest font-bold transition-all duration-300"
                 >
                     Schedule Site Visit
                 </Link>
                 {/* Mobile hamburger */}
                 <button
-                    className="sm:hidden flex flex-col gap-[5px] p-2"
+                    className="lg:hidden flex flex-col gap-[5px] p-2"
                     onClick={() => setMenuOpen(!menuOpen)}
                     aria-label="Toggle menu"
                 >
@@ -76,7 +77,7 @@ export default function Header() {
 
             {/* Mobile Menu */}
             {menuOpen && (
-                <div className="absolute top-full left-0 w-full bg-charcoal/98 backdrop-blur-md py-8 px-6 flex flex-col gap-6 sm:hidden border-t border-gold/20">
+                <div className="absolute top-full left-0 w-full bg-charcoal/98 backdrop-blur-md py-8 px-6 flex flex-col gap-6 lg:hidden border-t border-gold/20">
                     {navLinks.map(link => (
                         <NavLink
                             key={link.href}
