@@ -89,7 +89,7 @@ export default function DownloadBrochureButton({
         setErrors({});
     };
 
-    const inputBase = 'w-full border px-4 py-3 text-sm focus:outline-none transition-colors placeholder-charcoal/30';
+    const inputBase = 'w-full border px-4 py-3 text-sm text-charcoal bg-white focus:outline-none transition-colors placeholder-charcoal/30';
 
     return (
         <>
