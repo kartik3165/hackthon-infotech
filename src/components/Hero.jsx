@@ -1,12 +1,16 @@
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import heroGif from '../Aerial_city_image_animated_delpmaspu_-ezgif.com-video-to-gif-converter.gif';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
     const containerRef = useRef(null);
 
-    // Use a premium dark architectural/real estate stock image
-    const heroBg = "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80";
+    // Use the provided animated GIF
+    const heroBg = heroGif;
 
     useGSAP(() => {
         // Simple fade in for the text on load

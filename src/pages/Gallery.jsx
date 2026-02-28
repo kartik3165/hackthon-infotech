@@ -7,15 +7,51 @@ import PageHero from '../components/PageHero';
 gsap.registerPlugin(ScrollTrigger);
 
 const galleryImages = [
-    { src: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1200', label: 'Skyline Heights — Exterior', category: 'Exterior' },
-    { src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200', label: 'Skyline Greens — Living Room', category: 'Interior' },
-    { src: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200', label: 'Business Hub — Facade', category: 'Exterior' },
-    { src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&q=80&w=1200', label: 'Skyline Heights — Pool Deck', category: 'Amenities' },
-    { src: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200', label: 'Metro Plaza — Tower View', category: 'Exterior' },
-    { src: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=1200', label: 'Business Hub — Lobby', category: 'Interior' },
-    { src: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=1200', label: 'Skyline Villas — Garden', category: 'Amenities' },
-    { src: 'https://images.unsplash.com/photo-1600566753190-17f0bb2a6c3e?auto=format&fit=crop&q=80&w=1200', label: 'Skyline One — Penthouse', category: 'Interior' },
-    { src: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200', label: 'Skyline Icon — Boardroom', category: 'Interior' },
+    {
+        src: "https://source.unsplash.com/1200x800/?modern-building,city",
+        label: "Skyline Heights — Exterior",
+        category: "Exterior",
+    },
+    {
+        src: "https://source.unsplash.com/1200x800/?luxury-living-room,interior",
+        label: "Skyline Greens — Living Room",
+        category: "Interior",
+    },
+    {
+        src: "https://source.unsplash.com/1200x800/?office-building,architecture",
+        label: "Business Hub — Facade",
+        category: "Exterior",
+    },
+    {
+        src: "https://source.unsplash.com/1200x800/?swimming-pool,rooftop",
+        label: "Skyline Heights — Pool Deck",
+        category: "Amenities",
+    },
+    {
+        src: "https://source.unsplash.com/1200x800/?skyscraper,tower",
+        label: "Metro Plaza — Tower View",
+        category: "Exterior",
+    },
+    {
+        src: "https://source.unsplash.com/1200x800/?office-lobby,interior",
+        label: "Business Hub — Lobby",
+        category: "Interior",
+    },
+    {
+        src: "https://source.unsplash.com/1200x800/?garden,landscape,real-estate",
+        label: "Skyline Villas — Garden",
+        category: "Amenities",
+    },
+    {
+        src: "https://source.unsplash.com/1200x800/?penthouse,interior",
+        label: "Skyline One — Penthouse",
+        category: "Interior",
+    },
+    {
+        src: "https://source.unsplash.com/1200x800/?conference-room,office",
+        label: "Skyline Icon — Boardroom",
+        category: "Interior",
+    },
 ];
 
 const filters = ['All', 'Exterior', 'Interior', 'Amenities'];
